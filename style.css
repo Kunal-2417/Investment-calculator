@@ -1,0 +1,60 @@
+body{
+    margin-top: 7rem;
+    background-color: #ecdff4;
+}
+form {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    display: inline-block;
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+input[type="number"],
+select {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #fff;
+    width: 200px;
+    box-sizing: border-box;
+}
+
+input[type="button"] {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+}
+
+input[type="button"]:hover {
+    background-color: #3e8e41;
+}
+
+label[for="total"],
+label[for="interest"] {
+    font-weight: bold;
+}
+
+span {
+    font-weight: bold;
+    color: #4CAF50;
+}

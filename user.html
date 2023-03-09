@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ 
+
+<form>
+    <label for="principal">Principal:</label>
+    <input type="number" id="principal" name="principal" value="10000"><br><br>
+
+    <label for="interest-rate">Annual Interest Rate:</label>
+    <input type="number" id="interest-rate" name="interest-rate" step="0.01" value="5"><br><br>
+
+    <label for="investment-period">Investment Period (Years):</label>
+    <input type="number" id="investment-period" name="investment-period" value="10"><br><br>
+
+    <label for="compound-interval">Compound Interval:</label>
+    <select id="compound-interval" name="compound-interval">
+        <option value="1">Annually</option>
+        <option value="2">Semi-annually</option>
+        <option value="4">Quarterly</option>
+        <option value="12">Monthly</option>
+    </select><br><br>
+
+    <input type="button" value="Calculate" onclick="investmentCalculator()"><br><br>
+
+    <label for="total">Total:</label>
+    <span id="total"></span><br><br>
+
+    <label for="interest">Interest:</label>
+    <span id="interest"></span>
+</form>
+ 
+<script type="text/javascript">
+    function investmentCalculator() {
+    var principal = document.getElementById("principal").value;
+    var interestRate = document.getElementById("interest-rate").value;
+    var investmentPeriod = document.getElementById("investment-period").value;
+    var compoundInterval = document.getElementById("compound-interval").value;
+
+    var total = principal * Math.pow((1 + (interestRate / 100) / compoundInterval), compoundInterval *
+    investmentPeriod);
+    var interest = total - principal;
+
+    document.getElementById("total").innerHTML = "$" + total.toFixed(2);
+    document.getElementById("interest").innerHTML = "$" + interest.toFixed(2);
+    }
+    </script>
+</body>
+</html>
